@@ -6,7 +6,7 @@ import Pagination from './Pagination'
 
 export const CardView = ({ data }) => {
   const results = data?.results
-  console.log(results)
+  // console.log(results)
   // const pokemonList = results
   const listaDePokemons = results?.map(({ name }) => ({ name }))
 

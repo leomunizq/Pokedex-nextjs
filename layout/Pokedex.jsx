@@ -6,11 +6,10 @@ import fetchPokemonList from '../pages/api/PokemonList'
 
 export default function Pokedex() {
   const [page, setPage] = useState(1)
+  const { data, isLoading1, isError1 } = fetchPokemonList(page)
   const [loading, setLoading] = useState(false)
 
   const [pokemonLista, setPokemonLista] = useState([])
-
-
 
   return (
     <>
@@ -19,6 +18,7 @@ export default function Pokedex() {
         setPage={setPage}
         loading={loading}
         setLoading={setLoading}
+        data={data}
       />
 
       <Pagination setPage={setPage} page={page} />

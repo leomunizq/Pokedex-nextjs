@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 
-export const Search = setListaDePokemons2 => {
+export const Search = props => {
   const [inputValue, setInputValue] = useState('')
 
+  console.log('props.data', props.data)
   function handleSubmit(e) {
     e.preventDefault()
 
