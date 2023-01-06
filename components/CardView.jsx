@@ -1,30 +1,30 @@
-import fetchPokemon from '../pages/api/pokemon/index'
+import { fetchPokemon } from '../pages/api/pokemon/index'
 import Image from 'next/image'
 import iconweight from '../public/img/iconweight.svg'
 import iconruler from '../public/img/iconruler.svg'
 import Pagination from './Pagination'
 
-export const CardView = ({ data }) => {
-  const results = data?.results
+export const CardView = ({ pokemonLista }) => {
+  // const results = data?.results
   // console.log(results)
   // const pokemonList = results
-  const listaDePokemons = results?.map(({ name }) => ({ name }))
+  // const listaDePokemons = results?.map(({ name }) => ({ name }))
 
-  // console.log('pokemonlist', pokemonList)
+  // console.log('results card', results) ok
 
   // console.log('listaDePokemons', listaDePokemons)
 
-  const dadosPokemon = listaDePokemons?.map(function (item) {
-    const { name } = item
-    const { dados } = fetchPokemon(name)
+  // const dadosPokemon = listaDePokemons?.map(function (item) {
+  //   const { name } = item
+  //   const { dados } = fetchPokemon(name)
 
-    return dados
-  })
-  // console.log('dadosPokemon teste', dadosPokemon)
+  //   return dados
+  // })
+  // console.log('dadosPokemon cardview', data)
 
   return (
     <>
-      {dadosPokemon?.map(dado => (
+      {pokemonLista?.map(dado => (
         <div
           key={dado?.name}
           className=" bg-white border border-gray-200 rounded-3xl shadow-md dark:bg-gray-800 dark:border-gray-700"

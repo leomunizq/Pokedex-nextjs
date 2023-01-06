@@ -3,23 +3,23 @@ import React, { useState } from 'react'
 export const Search = props => {
   const [inputValue, setInputValue] = useState('')
 
-  console.log('props.data', props.data)
+  // console.log('props.data search', props.pokemonLista)
   function handleSubmit(e) {
     e.preventDefault()
-
     // props.setLoading(true)
     const requestPokemon = fetchPokemon(inputValue.toLowerCase())
+    console.log('requestPokemon searchpage', requestPokemon)
 
-    // requestPokemon.response.ok
-    //   ? props.setPokemonList([requestPokemon.data])
-    //   : props.setError(requestPokemon.error)
+    requestPokemon.response.ok
+      ? props.setPokemonList([requestPokemon.data])
+      : props.setError(requestPokemon.error)
 
     // props.setLoading(false)
     setInputValue('')
-    console.log('requestPokemon', requestPokemon)
-    setListaDePokemons2(requestPokemon)
+    // console.log('requestPokemon searchpage', requestPokemon)
+    setPokemonLista(requestPokemon)
   }
-  // console.log('inputValue', inputValue)
+  console.log('inputValue', inputValue)
 
   return (
     <div>
