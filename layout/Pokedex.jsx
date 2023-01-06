@@ -5,7 +5,7 @@ import Pagination from '../components/Pagination'
 import { fetchPokemonList } from '../pages/api/PokemonList'
 
 export default function Pokedex() {
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState([1])
   // const data = fetchPokemonList(page)
   // console.log('data', data)
   const [loading, setLoading] = useState(false)

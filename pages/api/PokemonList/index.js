@@ -99,6 +99,8 @@ export function fetchPokemonList(page) {
         return values
       })
 
+      // console.log('pokemonpromisses', pokemonList)
+
       // console.log('daddoooos api1', dadosPokemon)
       return pokemonList
     })

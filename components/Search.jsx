@@ -1,25 +1,18 @@
 import React, { useState } from 'react'
+import { fetchPokemon } from '../pages/api/pokemon/index'
 
-export const Search = props => {
+export const Search = ({ pokemonLista, setPokemonLista }) => {
   const [inputValue, setInputValue] = useState('')
 
-  // console.log('props.data search', props.pokemonLista)
-  function handleSubmit(e) {
+  const handleSubmit = async e => {
     e.preventDefault()
-    // props.setLoading(true)
-    const requestPokemon = fetchPokemon(inputValue.toLowerCase())
-    console.log('requestPokemon searchpage', requestPokemon)
 
-    requestPokemon.response.ok
-      ? props.setPokemonList([requestPokemon.data])
-      : props.setError(requestPokemon.error)
+    const requestPokemon = await fetchPokemon(inputValue.toLowerCase())
 
-    // props.setLoading(false)
+    setPokemonLista([requestPokemon])
+
     setInputValue('')
-    // console.log('requestPokemon searchpage', requestPokemon)
-    setPokemonLista(requestPokemon)
   }
-  console.log('inputValue', inputValue)
 
   return (
     <div>
@@ -40,7 +33,7 @@ export const Search = props => {
         </div>
         <button
           // type="submit"
-          onSubmit={handleSubmit}
+          onClick={handleSubmit}
           className="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           <svg
