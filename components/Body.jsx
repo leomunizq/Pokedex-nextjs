@@ -34,6 +34,8 @@ export default function Body(props) {
           setLoading={props.setLoading}
           pokemonInfo={props.pokemonInfo}
           setPokemonInfo={props.setPokemonInfo}
+          modalVisible={props.modalVisible}
+          setModalVisible={props.setModalVisible}
         />
       </div>
       <div className="pagina 1"></div>

@@ -4,10 +4,19 @@ import iconweight from '../public/img/iconweight.svg'
 import iconruler from '../public/img/iconruler.svg'
 import Pagination from './Pagination'
 
-export const CardView = ({ pokemonLista, setPokemonLista }) => {
+export const CardView = props => {
+  const handleClick = async e => {
+    e.preventDefault()
+    let varName = e.currentTarget.value
+
+    const pokemon = await fetchPokemon(varName)
+    props.setModalVisible(true)
+    props.setPokemonInfo(pokemon)
+  }
+
   return (
     <>
-      {pokemonLista.map(dado => (
+      {props.pokemonLista.map(dado => (
         <div
           key={dado?.name}
           className=" bg-white border border-gray-200 rounded-3xl shadow-md dark:bg-gray-800 dark:border-gray-700"
@@ -62,7 +71,13 @@ export const CardView = ({ pokemonLista, setPokemonLista }) => {
               </div>
             </div>
 
-            <button className="button-og">Read More</button>
+            <button
+              className="button-og"
+              value={dado?.name}
+              onClick={handleClick}
+            >
+              Read More
+            </button>
           </div>
         </div>
       ))}

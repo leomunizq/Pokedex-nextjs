@@ -11,7 +11,7 @@ export const TypesFilter = props => {
     setSelectedType(varName)
     props.setPokemonAmount(9)
     const data = await fetchPokemonByType(varName)
-    console.log('data', data)
+
     props.setPokemonLista(data)
     props.setShowPagination(false)
   }

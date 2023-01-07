@@ -4,6 +4,7 @@ import Body from '../components/Body'
 import Pagination from '../components/Pagination'
 import { MorePokemonsButtons } from '../components/MorePokemonsButtons'
 import { fetchPokemonList } from '../pages/api/PokemonList'
+import { Modal } from '../components/Modal'
 
 export default function Pokedex() {
   const [page, setPage] = useState([1])
@@ -12,6 +13,7 @@ export default function Pokedex() {
   const [showPagination, setShowPagination] = useState(true)
   const [pokemonAmount, setPokemonAmount] = useState(0)
   const [pokemonInfo, setPokemonInfo] = useState()
+  const [modalVisible, setModalVisible] = useState(false)
 
   // console.log('pokemonLista pokedex', pokemonLista)
   useEffect(() => {
@@ -35,6 +37,8 @@ export default function Pokedex() {
         setPokemonAmount={setPokemonAmount}
         pokemonInfo={pokemonInfo}
         setPokemonInfo={setPokemonInfo}
+        modalVisible={modalVisible}
+        setModalVisible={setModalVisible}
       />
 
       {showPagination ? (
@@ -48,6 +52,15 @@ export default function Pokedex() {
         <MorePokemonsButtons
           pokemonAmount={pokemonAmount}
           setPokemonAmount={setPokemonAmount}
+        />
+      )}
+
+      {modalVisible && (
+        <Modal
+          modalVisible={modalVisible}
+          setModalVisible={setModalVisible}
+          pokemonInfo={pokemonInfo}
+          setPokemonInfo={setPokemonInfo}
         />
       )}
     </>
