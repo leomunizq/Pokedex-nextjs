@@ -57,7 +57,7 @@ export const CardView = props => {
               <div className="peso-box flex-col text-center">
                 <div className="peso flex gap-2">
                   <Image src={iconweight} alt="pokemon" loading="lazy"></Image>
-                  <span>{dado?.weight}kg</span>
+                  <span>{dado?.weight / 10}kg</span>
                 </div>
                 <span>Peso</span>
               </div>
@@ -65,7 +65,7 @@ export const CardView = props => {
               <div className="altura-box flex-col text-center">
                 <div className="altura flex gap-2">
                   <Image src={iconruler} alt="pokemon" loading="lazy"></Image>
-                  <span>{dado?.height}cm</span>
+                  <span>{dado?.height / 10}m</span>
                 </div>
                 <span>Altura</span>
               </div>
