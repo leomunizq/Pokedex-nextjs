@@ -5,7 +5,7 @@ import iconruler from '../public/img/iconruler.svg'
 import Pagination from './Pagination'
 import { pokemonTypes } from '../pages/api/PokemonByType/pokemonTypes'
 import { TypesFilter } from './TypesFilter';
-import TypesBar from './TypesBar';
+import {TypesBar} from './TypesBar';
 
 export const CardView = props => {
   const handleClick = async e => {
@@ -47,10 +47,11 @@ export const CardView = props => {
 
                 dado?.types.map(({type}) => {
                   return (
-                    <TypesBar key={type.name} type={type.name} />
+                    <TypesBar key={type.name} type={type.name} color={type.color}/>
                   )
                 })
              }
+
             </div>
 
             <div className="atributos flex justify-center gap-6 m-4">

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 export const TypesFilter = props => {
   const [selectedType, setSelectedType] = useState('')
-
+  
   const handleClick = async e => {
     e.preventDefault()
     let varName = e.currentTarget.value

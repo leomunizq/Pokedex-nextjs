@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import Pagination from './Pagination'
-import { CardView } from './CardView'
+import {CardView} from './CardView'
 import fetchPokemonList from '../pages/api/PokemonList/index'
 import fetchPokemon from '../pages/api/pokemon'
 import { SearchBar } from './SearchBar'
