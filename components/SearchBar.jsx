@@ -3,7 +3,7 @@ import { TypesFilter } from './TypesFilter'
 
 export const SearchBar = props => {
   return (
-    <>
+    <div className='xl:container xl:mx-auto flex justify-between mt-12' >
       <TypesFilter
         pokemonLista={props.pokemonLista}
         setPokemonLista={props.setPokemonLista}
@@ -26,6 +26,6 @@ export const SearchBar = props => {
         showPagination={props.showPagination}
         setShowPagination={props.setShowPagination}
       />
-    </>
+    </div >
   )
 }

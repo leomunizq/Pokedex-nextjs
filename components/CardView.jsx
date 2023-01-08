@@ -4,10 +4,13 @@ import iconweight from '../public/img/iconweight.svg'
 import iconruler from '../public/img/iconruler.svg'
 import Pagination from './Pagination'
 import { pokemonTypes } from '../pages/api/PokemonByType/pokemonTypes'
-import { TypesFilter } from './TypesFilter';
-import {TypesBar} from './TypesBar';
+import { ButtonType } from './ButtonType'
 
 export const CardView = props => {
+
+  
+
+
   const handleClick = async e => {
     e.preventDefault()
     let varName = e.currentTarget.value
@@ -17,6 +20,7 @@ export const CardView = props => {
     props.setPokemonInfo(pokemon)
   }
 
+  
   return (
     <>
       {props.pokemonLista.map(dado => (
@@ -42,15 +46,16 @@ export const CardView = props => {
               </h5>
             </a>
             <div className="tipo justify-center flex">
-             
-             {
+              
+              
+              {dado?.types.map(({ type }) => (
+                
+                <ButtonType key={type.name} type={type.name} tabIndex={false} />
+              ))}
 
-                dado?.types.map(({type}) => {
-                  return (
-                    <TypesBar key={type.name} type={type.name} color={type.color}/>
-                  )
-                })
-             }
+
+              
+
 
             </div>
 
@@ -74,6 +79,7 @@ export const CardView = props => {
 
             <button
               className="button-og"
+              // style={{ backgroundColor: color }}
               value={dado?.name}
               onClick={handleClick}
             >

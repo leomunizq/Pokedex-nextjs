@@ -1,6 +1,6 @@
 export const MorePokemonsButtons = props => {
   return (
-    <div className="testge">
+    <div className="text-center">
       <button
         onClick={() => props.setPokemonAmount(props.pokemonAmount + 9)}
         type="button"
@@ -24,7 +24,11 @@ export const MorePokemonsButtons = props => {
       </button>
       <button
         type="submit"
-        // onClick={handleSubmit}
+        onClick={() => window.scrollTo({
+          top: 800,
+          left: 100,
+          behavior: 'smooth'
+        })}
         class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
       >
         <svg

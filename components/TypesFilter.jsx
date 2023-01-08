@@ -1,10 +1,21 @@
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import "swiper/css";
+import "swiper/css/navigation";
+
 import { pokemonTypes } from '../pages/api/PokemonByType/pokemonTypes'
 import { fetchPokemonByType } from '../pages/api/PokemonByType/index'
 import { useEffect, useState } from 'react'
+import { ButtonType } from './ButtonType'
 
 export const TypesFilter = props => {
   const [selectedType, setSelectedType] = useState('')
-  
+
+   
+
+
   const handleClick = async e => {
     e.preventDefault()
     let varName = e.currentTarget.value
@@ -27,18 +38,39 @@ export const TypesFilter = props => {
   }, [props.pokemonAmount])
 
   return (
+    <div className='w-4/12'>
+
+
     
-        <button
-          key={props.name}
-          value={props.name}
-          type="button"
-          onClick={handleClick}
-          style={{ backgroundColor: props.color }}
-          // id="pokeType"
-          className="text-white  focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none "
-        >
-          {props.name}
-        </button>
+ 
+
+   
+ <Swiper
+      // spaceBetween={30}
+      modules={[Navigation, Pagination]}
+      slidesPerView={5}
+      navigation={true}
      
+      
+    
+    >
+     
+     {pokemonTypes.map(({ name }) => (
+    <SwiperSlide 
+    style={{flexShrink: 'unset'}}
+    >
+      
+      <ButtonType key={name} type={name} tabIndex={false} handleClick={handleClick}/>
+      
+      </SwiperSlide>
+        
+    
+      ))}
+    </Swiper>
+  
+
+      
+    </div>
   )
 }
+
