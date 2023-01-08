@@ -105,6 +105,34 @@ a {
   }
 }
 
+.divider-1{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; 
+}
+
+.divider-1:after{
+  content: "";
+  display: block;
+  width: 1px;
+  height: 13.25rem;
+  margin: 0px auto;
+  background: linear-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.divider-1:before{
+  content: "";
+  display: block;
+  width: 1px;
+  height: 13.25rem;
+  margin: 0px auto;
+  background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+}
+
+
 .button-og{
 
   width: calc(100% + 2px);
@@ -131,4 +159,68 @@ a {
 transform: scale(0.8);
 animation: 0.4s ease 0s 1 normal forwards running krBpXd; */
 
+}
+.card-back{
+  position: relative;
+  overflow: hidden;
+}
+.card-back::before{
+  content: "";
+    display: block;
+    width: 11.5rem;
+    height: 10.5rem;
+    background: rgb(0 201 207);
+    filter: blur(128px);
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.8s ease 0s;
+    z-index: -1;
+}
+
+
+.waves {
+  width: 100%;
+  height: 7.5rem;
+  margin-bottom: -0.44rem; /*Fix for safari gap*/
+  min-height: 7.5rem;
+  max-height: 7.5rem;
+  /* position: absolute; */
+  bottom: 0;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media (max-width: 500px) {
+  .waves {
+    height: 2.5rem;
+    min-height: 2.5rem;
+  }
 }

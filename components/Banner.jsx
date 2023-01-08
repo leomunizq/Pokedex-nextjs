@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import charizard from '../public/img/charizard.png'
+import fire from '../public/img/pokemonTypes/fire.svg'
 import Header from './Header'
+import { Waves } from './Waves'
 
 export const Banner = () => {
   return (
@@ -25,11 +27,16 @@ export const Banner = () => {
           </p>
           <button className="button">More details</button>
         </div>
-        <div className="separador">....</div>
+        <div className="divider-1">
+
+<Image src={fire} alt="divider" width={60} height={60}></Image>
+        </div>
         <div className="charizard-box w-2/6">
           <Image src={charizard} alt="pokemon"></Image>
         </div>
       </div>
+      <Waves />
     </div>
+
   )
 }

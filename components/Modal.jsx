@@ -4,6 +4,7 @@ import divider from '../public/img/divider.svg'
 import Image from 'next/image'
 import { ProgressBar } from './ProgressBar'
 import { useState } from 'react'
+import { ButtonType } from './ButtonType'
 
 export const Modal = props => {
   const statsNumber = 50
@@ -62,20 +63,14 @@ export const Modal = props => {
                     {props.pokemonInfo.name}
                   </h5>
                 </a>
-                <div className="tipo justify-center flex">
-                  <button
-                    type="button"
-                    className="border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
-                  >
-                    {props.pokemonInfo.types[0].type.name}
-                  </button>
-                  <button
-                    type="button"
-                    className="border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
-                  >
-                    {props.pokemonInfo.types[0].type.name}
-                  </button>
-                </div>
+                <div className="gap-2 justify-center flex">
+              
+              
+              {props.pokemonInfo?.types.map(({ type }) => (
+                
+                <ButtonType key={type.name} type={type.name} tabIndex={false} />
+              ))}
+            </div>
 
                 <div className="atributos flex justify-center gap-6 m-4">
                   <div className="peso-box flex-col text-center">

@@ -6,10 +6,15 @@ import Pagination from './Pagination'
 import { pokemonTypes } from '../pages/api/PokemonByType/pokemonTypes'
 import { ButtonType } from './ButtonType'
 
+
 export const CardView = props => {
 
-  
+ 
+  // const [{ color }] = pokemonTypes.filter(
+  //  (type) =>   props.pokemonInfo.types[0].type.name.indexOf(type.name) !== -1
+  // );
 
+  console.log(props.pokemon)
 
   const handleClick = async e => {
     e.preventDefault()
@@ -26,7 +31,8 @@ export const CardView = props => {
       {props.pokemonLista.map(dado => (
         <div
           key={dado?.name}
-          className=" bg-white border border-gray-200 rounded-3xl shadow-md dark:bg-gray-800 dark:border-gray-700"
+          className="card-back bg-white border border-gray-200 rounded-3xl shadow-md dark:bg-gray-800/25 dark:border-gray-700"
+          style={{ backgroundColor: props.color }}
         >
           <a className="teste flex justify-center " href="#">
             <Image
@@ -45,7 +51,7 @@ export const CardView = props => {
                 {dado?.name}
               </h5>
             </a>
-            <div className="tipo justify-center flex">
+            <div className="gap-2 justify-center flex">
               
               
               {dado?.types.map(({ type }) => (

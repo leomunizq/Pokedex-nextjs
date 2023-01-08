@@ -39,24 +39,17 @@ export const TypesFilter = props => {
 
   return (
     <div className='w-4/12'>
-
-
-    
- 
-
-   
  <Swiper
       // spaceBetween={30}
       modules={[Navigation, Pagination]}
       slidesPerView={5}
+      spaceBetween={10}
       navigation={true}
-     
-      
-    
     >
      
      {pokemonTypes.map(({ name }) => (
     <SwiperSlide 
+    
     style={{flexShrink: 'unset'}}
     >
       

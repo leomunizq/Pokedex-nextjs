@@ -7,8 +7,8 @@ import fetchPokemon from '../pages/api/pokemon'
 import { SearchBar } from './SearchBar'
 
 export default function Body(props) {
-  // const { data, isLoading1, isError1 } = fetchPokemonList(props.page)
-  // console.log('props.data body', props.pokemonLista)
+  
+  
 
   return (
     <>
