@@ -3,6 +3,9 @@ import Image from 'next/image'
 import iconweight from '../public/img/iconweight.svg'
 import iconruler from '../public/img/iconruler.svg'
 import Pagination from './Pagination'
+import { pokemonTypes } from '../pages/api/PokemonByType/pokemonTypes'
+import { TypesFilter } from './TypesFilter';
+import TypesBar from './TypesBar';
 
 export const CardView = props => {
   const handleClick = async e => {
@@ -39,18 +42,15 @@ export const CardView = props => {
               </h5>
             </a>
             <div className="tipo justify-center flex">
-              <button
-                type="button"
-                className="border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
-              >
-                {dado?.types[0].type.name}
-              </button>
-              <button
-                type="button"
-                className="border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
-              >
-                {dado?.types[0].type.name}
-              </button>
+             
+             {
+
+                dado?.types.map(({type}) => {
+                  return (
+                    <TypesBar key={type.name} type={type.name} />
+                  )
+                })
+             }
             </div>
 
             <div className="atributos flex justify-center gap-6 m-4">

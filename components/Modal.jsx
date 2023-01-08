@@ -11,20 +11,20 @@ export const Modal = props => {
 
   const formatStatName = statName => {
     switch (statName) {
-      case "hp":
-        return "HP";
-      case "attack":
-        return "Attack";
-      case "defense":
-        return "Defense";
-      case "special-attack":
-        return "Sp. Atk";
-      case "special-defense":
-        return "Sp. Def";
-      case "speed":
-        return "Speed";
+      case 'hp':
+        return 'HP'
+      case 'attack':
+        return 'Attack'
+      case 'defense':
+        return 'Defense'
+      case 'special-attack':
+        return 'Sp. Atk'
+      case 'special-defense':
+        return 'Sp. Def'
+      case 'speed':
+        return 'Speed'
     }
-  };
+  }
 
   return (
     <>
@@ -34,13 +34,15 @@ export const Modal = props => {
         }
         class="z-50 fixed top-0 left-0 right-0 bottom-0 flex items-center w-full h-full p-4  bg-zinc-900	 bg-opacity-70 overflow-y-auto"
       >
-        <div class="
+        <div
+          class="
         
         max-w-5xl flex justify-between w-full mx-auto    rounded-3xl  
          backdrop-1
         
         
-        ">
+        "
+        >
           <div class="w-4/12 relative flex justify-center">
             <div key={props.pokemonInfo.name} className="absolute bottom-5">
               <a className="teste flex justify-center " href="#">
@@ -113,12 +115,24 @@ export const Modal = props => {
           <div class="pt-9 w-full max-w-xl pb-6 px-6 -mb-2">
             <div className="mb-4 justify-between flex">
               <h1 className="text-left text-white-100  text-4xl">Stats</h1>
-              <button>
-              <svg onClick={e =>
-          e.target === e.currentTarget && props.setModalVisible(false)
-        } className="w-12" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-</svg>
+              <button onClick={() => props.setModalVisible(false)
+                  }>
+                <svg
+                  
+                  className="w-12"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
               </button>
             </div>
 
