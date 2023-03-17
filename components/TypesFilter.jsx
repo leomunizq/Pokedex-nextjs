@@ -35,7 +35,7 @@ export const TypesFilter = props => {
         )
       })()
     }
-  }, [props.pokemonAmount])
+  }, [props.pokemonAmount, selectedType])
 
   return (
     <div className='w-4/12'>
@@ -49,7 +49,7 @@ export const TypesFilter = props => {
      
      {pokemonTypes.map(({ name }) => (
     <SwiperSlide 
-    
+    key={name}
     style={{flexShrink: 'unset'}}
     >
       

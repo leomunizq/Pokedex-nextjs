@@ -34,16 +34,19 @@ export const CardView = props => {
           className="card-back bg-white border border-gray-200 rounded-3xl shadow-md dark:bg-gray-800/25 dark:border-gray-700"
           style={{ backgroundColor: props.color }}
         >
-          <a className="teste flex justify-center " href="#">
+          <a className="flex justify-center " 
+          
+          >
             <Image
               src={dado?.sprites.other['home'].front_default}
               height={300}
               width={300}
               alt="fotos"
+              
             ></Image>
           </a>
           <div className="p-0">
-            <a href="#">
+            <a>
               <h6 className="mb-2 text-xl text-center font-bold tracking-tight text-gray-900 dark:text-white">
                 #001
               </h6>

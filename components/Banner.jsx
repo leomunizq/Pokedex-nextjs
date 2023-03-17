@@ -22,14 +22,13 @@ export const Banner = () => {
           <p className="text-base font-normal">
             Charizard se assemelha a um grande tradicional dragão europeu.
             Apesar da semelhança, Charizard é explicitamente um Pokémon dos
-            tipos Fogo e Voador, e não um tipo Dragão, exceto em sua forma "Mega
-            Charizard X"; No entanto, ele pode aprender ataques do tipo Dragão.
+            tipos Fogo e Voador, e não um tipo Dragão, exceto em sua forma &quot;Mega
+            Charizard X&quot;; No entanto, ele pode aprender ataques do tipo Dragão.
           </p>
           <button className="button">More details</button>
         </div>
         <div className="divider-1">
-
-<Image src={fire} alt="divider" width={60} height={60}></Image>
+          <Image src={fire} alt="divider" width={60} height={60}></Image>
         </div>
         <div className="charizard-box w-2/6">
           <Image src={charizard} alt="pokemon"></Image>
@@ -37,6 +36,5 @@ export const Banner = () => {
       </div>
       <Waves />
     </div>
-
   )
 }

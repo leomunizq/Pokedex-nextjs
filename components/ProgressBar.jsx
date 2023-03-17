@@ -3,18 +3,18 @@ import { useEffect } from 'react'
 
 export const ProgressBar = props => {
   useEffect(() => {
-    const { statsNumber, statsName } = props
+    // const { statsNumber, statsName } = props
    
   let progress = 0
   let invervalSpeed = 10
   let incrementSpeed = 1
-  let bar = document.getElementById(statsName)
+  let bar = document.getElementById(props.statsName)
   
   let progressInterval = setInterval(function () {
       progress += incrementSpeed
       bar.style.width = progress + '%'
       bar.style.backgroundColor = props.statsNumber < 50 ? "#ff364e" : props.statsNumber  > 70  ?"#1cd80e" : "#FF9900"
-      if (progress >= statsNumber) {
+      if (progress >= props.statsNumber) {
         clearInterval(progressInterval)
       }
     }, invervalSpeed)
