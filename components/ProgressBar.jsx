@@ -18,7 +18,7 @@ export const ProgressBar = props => {
         clearInterval(progressInterval)
       }
     }, invervalSpeed)
-  }, [])
+  }, [props.statsNumber, props.statsName])
 
 
 

@@ -12,7 +12,7 @@ import { ButtonType } from './ButtonType'
 
 export const TypesFilter = props => {
   const [selectedType, setSelectedType] = useState('')
-
+let {pokemonAmount} = props.pokemonAmount
    
 
 
@@ -35,7 +35,7 @@ export const TypesFilter = props => {
         )
       })()
     }
-  }, [props.pokemonAmount, selectedType])
+  }, [pokemonAmount, selectedType])
 
   return (
     <div className='w-4/12'>

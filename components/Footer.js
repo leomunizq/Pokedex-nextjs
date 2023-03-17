@@ -1,3 +1,3 @@
 export default function Footer() {
-  return <h1>footer</h1>
+  return <h1>maior preguica de criar um footer</h1>
 }
