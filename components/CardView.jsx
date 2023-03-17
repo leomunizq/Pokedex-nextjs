@@ -43,7 +43,7 @@ export const CardView = props => {
               width={300}
               alt="fotos"
               
-            ></Image>
+             />
           </a>
           <div className="p-0">
             <a>
@@ -71,7 +71,7 @@ export const CardView = props => {
             <div className="atributos flex justify-center gap-6 m-4">
               <div className="peso-box flex-col text-center">
                 <div className="peso flex gap-2">
-                  <Image src={iconweight} alt="pokemon" loading="lazy"></Image>
+                  <Image src={iconweight} alt="pokemon" loading="lazy" />
                   <span>{dado?.weight / 10}kg</span>
                 </div>
                 <span>Peso</span>
@@ -79,7 +79,7 @@ export const CardView = props => {
 
               <div className="altura-box flex-col text-center">
                 <div className="altura flex gap-2">
-                  <Image src={iconruler} alt="pokemon" loading="lazy"></Image>
+                  <Image src={iconruler} alt="pokemon" loading="lazy" />
                   <span>{dado?.height / 10}m</span>
                 </div>
                 <span>Altura</span>

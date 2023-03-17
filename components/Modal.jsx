@@ -52,7 +52,7 @@ export const Modal = props => {
                   height={300}
                   width={300}
                   alt="fotos"
-                ></Image>
+                 />
               </a>
               <div className="p-0">
                 <a href="#">
@@ -79,7 +79,7 @@ export const Modal = props => {
                         src={iconweight}
                         alt="pokemon"
                         loading="lazy"
-                      ></Image>
+                       />
                       <span>{props.pokemonInfo.weight / 10}kg</span>
                     </div>
                     <span>Peso</span>
@@ -91,7 +91,7 @@ export const Modal = props => {
                         src={iconruler}
                         alt="pokemon"
                         loading="lazy"
-                      ></Image>
+                       />
                       <span>{props.pokemonInfo.height / 10}m</span>
                     </div>
                     <span>Altura</span>
@@ -104,7 +104,7 @@ export const Modal = props => {
           {/* divider */}
 
           <div class="flex flex-col justify-between after:content-[''] after:block after:w-px after:bg-white/25 after:h-40  after:mx-auto before:block before:w-px before:bg-white/25 before:h-40 before:mx-auto before:mb-0">
-            <Image src={divider} alt="pokemon" loading="lazy"></Image>
+            <Image src={divider} alt="pokemon" loading="lazy" />
           </div>
           {/* second div */}
           <div class="pt-9 w-full max-w-xl pb-6 px-6 -mb-2">

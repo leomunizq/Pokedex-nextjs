@@ -8,7 +8,7 @@ export default function Header() {
     <header>
       <div className="xl:container xl:mx-auto flex flex-col items-center sm:flex-row sm:justify-between text-center py-6">
         <div className="md:flex-none w-96 order-2 sm:order-1 flex justify-right py-4 sm:py-0">
-          <Image src={logopokemon} alt="logo"></Image>
+          <Image src={logopokemon} alt="logo" />
         </div>
         <div className="w-96 order-3 flex justify-end">
           <div className="flex gap-6">
