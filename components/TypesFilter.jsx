@@ -47,7 +47,7 @@ export const TypesFilter = props => {
       modules={[Navigation, Pagination]}
       slidesPerView={5}
       spaceBetween={10}
-      navigation={true}
+      navigation
     >
      
      {pokemonTypes.map(({ name }) => (
