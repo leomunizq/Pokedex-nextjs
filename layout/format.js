@@ -1,6 +1,5 @@
-import Header from '../components/header'
 import Head from 'next/head'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 
 export default function Layoutformat({ children }) {
   return (

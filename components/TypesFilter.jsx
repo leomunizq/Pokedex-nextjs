@@ -12,7 +12,7 @@ import { ButtonType } from './ButtonType'
 
 export const TypesFilter = props => {
   const [selectedType, setSelectedType] = useState('')
-let {pokemonAmount} = props.pokemonAmount
+  
    
 
 
@@ -26,12 +26,15 @@ let {pokemonAmount} = props.pokemonAmount
     props.setPokemonLista(data)
     props.setShowPagination(false)
   }
+ 
 
+  const pokemonAmount = props.pokemonAmount;
   useEffect(() => {
+  
     if (selectedType) {
       ;(async () => {
         props.setPokemonLista(
-          await fetchPokemonByType(selectedType, props.pokemonAmount)
+          await fetchPokemonByType(selectedType, pokemonAmount)
         )
       })()
     }
