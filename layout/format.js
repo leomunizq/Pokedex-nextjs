@@ -9,7 +9,7 @@ export default function Layoutformat({ children }) {
       </Head>
 
       <main>{children}</main>
-      <Footer></Footer>
+      <Footer />
     </>
   )
 }

@@ -38,7 +38,7 @@ export default function Body(props) {
           setModalVisible={props.setModalVisible}
         />
       </div>
-      <div className="pagina 1"></div>
+      <div className="pagina 1" />
     </>
   )
 }

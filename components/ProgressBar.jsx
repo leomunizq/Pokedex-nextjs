@@ -28,11 +28,11 @@ export const ProgressBar = props => {
         <span className=" w-16">{props.statsName}</span>
         <span className="font-semibold">{props.statsNumber}</span>
         <div className="h-3 flex-auto  relative  rounded-full overflow-hidden">
-          <div className="w-full h-full bg-gray-600 absolute"></div>
+          <div className="w-full h-full bg-gray-600 absolute" />
           <div
             id={props.statsName}
             className="h-full rounded-full relative w-0" 
-          ></div>
+           />
         </div>
       </li>
     </>

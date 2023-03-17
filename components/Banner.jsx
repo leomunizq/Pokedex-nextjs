@@ -17,7 +17,7 @@ export const Banner = () => {
       >
         <div className="description w-4/12">
           <span className="font-bold leading-5 text-2xl">#006</span>
-          <div className="atributes"></div>
+          <div className="atributes" />
           <h1 className="font-bold text-7xl uppercase">Charizard</h1>
           <p className="text-base font-normal">
             Charizard se assemelha a um grande tradicional dragão europeu.
@@ -28,10 +28,10 @@ export const Banner = () => {
           <button className="button">More details</button>
         </div>
         <div className="divider-1">
-          <Image src={fire} alt="divider" width={60} height={60}></Image>
+          <Image src={fire} alt="divider" width={60} height={60} />
         </div>
         <div className="charizard-box w-2/6">
-          <Image src={charizard} alt="pokemon"></Image>
+          <Image src={charizard} alt="pokemon" />
         </div>
       </div>
       <Waves />
