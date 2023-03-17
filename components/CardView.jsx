@@ -14,7 +14,7 @@ export const CardView = props => {
   //  (type) =>   props.pokemonInfo.types[0].type.name.indexOf(type.name) !== -1
   // );
 
-  console.log(props.pokemon)
+  
 
   const handleClick = async e => {
     e.preventDefault()
